@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Movie Theater</title>
+  </head>
+  <body>
+    <div class="container">
+      <form  id="movieForm">
+        <div class="jumbotron">
+        <h1>Movie Theater</h1>
+        </div>
+        <form id="movieType">
+          <div class="col-lg-12">
+            <h4>Pick a Movie you'd like to watch:</h4>
+            <select class="form-control" id="movieDropDown">
+              <option value="2">Nemo</option>
+              <option value="4">Die Hard</option>
+              <option value="6">The Omen</option>
+            </select>
+          </div>
+        </form>
+        </br>
+        <form id="ageInput">
+          <div class="col-lg-12">
+          <h4>How old are you?</h4>
+            <input type="radio" name="age" value="2">  Teen (10-13 years)<br>
+            <input type="radio" name="age" value="4">  Young Adult (18+ years)<br>
+            <input type="radio" name="age" value="6">  Senior (60+ years)</br>
+          </div>
+        </form>
+      </br>
+        <form id="timeInput">
+          <div class="col-lg-12">
+          <h4>What time would you like to watch your movie?</h4>
+            <input type="radio" name="time" value="2">  5:00pm<br>
+            <input type="radio" name="time" value="4"> 7:00pm<br>
+            <input type="radio" name="time" value="6">  9:00pm</br>
+          </div>
+        </form>
+      </br>
+        <button type="submit" class="btn btn-primary">Find!</button>
+      </form>
+      <div class="col-lg-12">
+        <div id="show-price">
+          </br>
+          <h2>Prices:</h2>
+          <p>Name of Movie: <span class="name-of-movie"></span></p>
+          <p>Age: <span class="ageOfUser"></span></p>
+          <p>Time <span class="timeOfMovie"></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
