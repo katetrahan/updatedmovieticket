@@ -17,9 +17,9 @@
           <div class="col-lg-12">
             <h4>Pick a Movie you'd like to watch:</h4>
             <select class="form-control" id="movieDropDown">
-              <option value="1">Nemo</option>
-              <option value="2">Die Hard</option>
-              <option value="3">The Omen</option>
+              <option value="Nemo">Nemo</option>
+              <option value="Die Hard">Die Hard</option>
+              <option value="The Omen">The Omen</option>
             </select>
           </div>
         <!-- </form> -->
@@ -27,32 +27,33 @@
         <!-- <form id="ageInput"> -->
           <div class="col-lg-12" id="ageInput">
           <h4>How old are you?</h4>
-            <input type="radio" name="age" value="young">  Teen (10-13 years)<br>
-            <input type="radio" name="age" value="ofAge">  Young Adult (18+ years)<br>
-            <input type="radio" name="age" value="old">  Senior (60+ years)</br>
+            <input type="radio" name="age" value="Teen (10-13 years)">  Teen (10-13 years)<br>
+            <input type="radio" name="age" value="Young Adult (18+ years)">  Young Adult (18+ years)<br>
+            <input type="radio" name="age" value="Senior (60+ years)">  Senior (60+ years)</br>
           </div>
         <!-- </form> -->
       </br>
         <!-- <form id="timeInput"> -->
           <div class="col-lg-12" id="timeInput">
           <h4>What time would you like to watch your movie?</h4>
-            <input type="radio" name="time" value="5">  5:00pm<br>
-            <input type="radio" name="time" value="7"> 7:00pm<br>
-            <input type="radio" name="time" value="9">  9:00pm</br>
+            <input type="radio" name="time" value="5:00pm">  5:00pm<br>
+            <input type="radio" name="time" value="7:00pm"> 7:00pm<br>
+            <input type="radio" name="time" value="9:00pm">  9:00pm</br>
           </div>
         <!-- </form> -->
       </br>
         <button type="submit" class="btn btn-primary">Find!</button>
       </form>
+    </br>
       <div class="col-lg-12">
-        <div id="show-price">
+        <ul id="show-price">
           </br>
           <h2>Prices:</h2>
-          <p>Name of Movie: <span class="name-of-movie"></span></p>
-          <p>Age: <span class="ageOfUser"></span></p>
-          <p>Time <span class="timeOfMovie"></span></p>
-          <p>Price $<strong><span class="price">0</strong></p>
-        </div>
+          <li>Name of Movie: <span class="name-of-movie"></span></li>
+          <li>Age: <span class="ageOfUser"></span></li>
+          <li>Time <span class="timeOfMovie"></span></li>
+          <li>Price $<strong><span class="price">0</strong></li>
+        </ul>
       </div>
     </div>
   </body>

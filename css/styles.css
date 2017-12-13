@@ -5,3 +5,18 @@
 button {
   margin-left: 15px;
 }
+
+#show-price {
+  display: none;
+  background-color: #A2BB5F
+}
+
+.movieticket {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.movieticket:hover {
+  text-decoration: underline;
+  column-rule-color: grey;
+}

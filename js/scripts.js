@@ -1,21 +1,25 @@
 ///business logic
 
-var price = 10;
+var discountPrice = 10;
+var price = 12
 
 function Ticket(movie, age, time) {
   this.movie = movie;
   this.age = age;
   this.time = time;
-  this.price = price;
 }
 
 Ticket.prototype.getTicketPrice = function() {
-  debugger;
-  if(this.age === "young") {
-    var ticketPrice = price -3;
-  }
-  if(this.time === "5") {
-    var ticketPrice = price -2;
+  // debugger;
+  if(this.age === "Teen (10-13 years)") {
+    var ticketPrice = discountPrice;
+  } else {
+     var ticketPrice = price;
+   }
+  if(this.time === "5:00pm") {
+    var ticketPrice = discountPrice;
+  } else {
+    var ticketPrice = price;
   }
   // debugger;
 
@@ -34,24 +38,24 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedMovie = $("#movieDropDown").val();
-    var inputtedAge = $("#ageInput").val();
-    var inputtedTime = $("#timeInput").val();
+    var inputtedAge = $("input[name=age]:checked").val();
+    var inputtedTime = $("input[name=time]:checked").val();
 
     var newTicket = new Ticket(inputtedMovie, inputtedAge, inputtedTime);
     var finalPrice = newTicket.getTicketPrice();
-    $("#show-price").append("<li><span class='movieticket'>" + newTicket.movie + "<span></li>");
+    $("ul#show-price").append("<li><span class='movieticket'>" + newTicket.movie + "<span></li>");
 
+    var result = newTicket.getTicketPrice();
+    $("#show-price").show();
+    $("#show-price").append("your price is: " + "$" + result);
     $(".movieticket").last().click(function() {
-      $("#show-price").fadeIn();
+    $("#show-price").fadeIn();
     $("#show-price h2").text(newTicket.movie);
     $(".name-of-movie").text(newTicket.movie);
     $(".timeOfMovie").text(newTicket.time);
     $(".ageOfUser").text(newTicket.age);
     $(".price").text(finalPrice);
-
-    var result = newTicket.getTicketPrice();
-    $("#show-price").append("your price is" + result);
-    console.log(getTicketPrice);
+    // console.log(getTicketPrice);
     });
   });
 });
